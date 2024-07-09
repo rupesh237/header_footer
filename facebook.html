@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook-like Layout</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.header, .footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    left: 0;
+    z-index: 1000;
+}
+
+.header {
+    top: 0;
+}
+
+.footer {
+    bottom: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    padding-top: 50px; /* Adjust for header height */
+    padding-bottom: 30px; /* Adjust for footer height */
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #f1f1f1;
+    padding: 10px;
+    box-sizing: border-box;
+    position: fixed;
+    height: 100%;
+    overflow: hidden; /* Ensure sidebars do not scroll */
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+.main-content {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.scrollable-content {
+    height: 100%;
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-right: 10px; /* Avoid scrollbar overlap */
+}
+
+.scrollable-content::-webkit-scrollbar {
+    width: 12px;
+}
+
+.scrollable-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    background-color: #ddd;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none; /* Hide sidebars on smaller screens */
+    }
+    .main-content {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <p>Header</p>
+    </header>
+    <div class="container">
+        <div class="sidebar left">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Messages</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main-content">
+            <div class="scrollable-content">
+                <p>Main Content</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                <p>Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+                <p>Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+                <p>Additional content to enable scrolling...</p>
+            </div>
+        </div>
+        <div class="sidebar right">
+            <p>Right Sidebar</p>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>Footer</p>
+    </footer>
+</body>
+</html>

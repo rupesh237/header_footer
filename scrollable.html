@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling Navigation Page</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        nav ul li {
+            float: left;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: #111;
+        }
+
+        section {
+            padding: 60px 20px;
+            margin-top: 50px;
+            /* Height of the navbar */
+        }
+
+        section:nth-of-type(odd) {
+            background-color: #f4f4f4;
+        }
+
+        section:nth-of-type(even) {
+            background-color: #ddd;
+        }
+
+        section h1 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#section1">Section 1</a></li>
+            <li><a href="#section2">Section 2</a></li>
+            <li><a href="#section3">Section 3</a></li>
+            <li><a href="#section4">Section 4</a></li>
+            <li><a href="#section5">Section 5</a></li>
+        </ul>
+    </nav>
+    <section id="section1">
+        <h1>Section 1</h1>
+        <p>Content for section 1...</p>
+    </section>
+    <section id="section2">
+        <h1>Section 2</h1>
+        <p>Content for section 2...</p>
+    </section>
+    <section id="section3">
+        <h1>Section 3</h1>
+        <p>Content for section 3...</p>
+    </section>
+    <section id="section4">
+        <h1>Section 4</h1>
+        <p>Content for section 4...</p>
+    </section>
+    <section id="section5">
+        <h1>Section 5</h1>
+        <p>Content for section 5...</p>
+    </section>
+</body>
+
+</html>
